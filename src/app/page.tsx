@@ -16,7 +16,7 @@ export default function Page() {
     () =>
       [
         { id: "apps", label: "Work" },
-        { id: "contact", label: "Contact" },
+        
       ] as const,
     []
   );
@@ -195,7 +195,136 @@ export default function Page() {
           </div>
         </div>
       </motion.section>
-      <Divider />
+      
+    
+{/* ================= CASE STUDY (APP-AGNOSTIC) ================= */}
+<motion.section {...sectionReveal()} className="py-20 sm:py-28">
+  <div className="mx-auto max-w-5xl px-6 sm:px-8">
+    <p className="text-xs uppercase tracking-[0.18em] text-white/40">
+      Case study
+    </p>
+
+    <h2 className="mt-4 text-2xl sm:text-3xl font-medium">
+      How I turn complex operations into reliable execution
+    </h2>
+
+    <p className="mt-4 max-w-2xl text-white/60 leading-relaxed">
+      A real-world systems approach — independent of tools or platforms.
+    </p>
+
+    <div className="mt-12 max-w-3xl space-y-12">
+      {/* Context */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-medium tracking-wide text-white/85">
+          Context
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          A delivery environment with multiple stakeholders, fragmented inputs,
+          and no single source of truth. Work was happening, but visibility,
+          accountability, and follow-through were inconsistent.
+        </p>
+
+        <ul className="mt-4 space-y-2 text-white/70">
+          {[
+            "Repeated follow-ups",
+            "Missed or late deliverables",
+            "Manual status tracking",
+            "Decisions made without clear signals",
+          ].map((x) => (
+            <li key={x} className="flex gap-3">
+              <span className="mt-2 h-4 w-px bg-[#FFC83D]" />
+              <span className="leading-relaxed">{x}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* The Problem */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-medium tracking-wide text-white/85">
+          The problem
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          The challenge wasn’t effort — it was structure. Information existed,
+          but it was scattered across systems, signals were noisy or delayed,
+          decisions relied on manual interpretation, and execution depended on
+          individual heroics.
+        </p>
+      </div>
+
+      {/* Approach */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-medium tracking-wide text-white/85">
+          What I Did
+        </h3>
+
+        <ul className="mt-4 space-y-2 text-white/70">
+    {[
+      "Created a single source of truth for status and accountability",
+      "Defined simple rules for what counts as done, blocked, or at-risk",
+      "Introduced lightweight checklists to reduce rework and missed handoffs",
+      "Built a repeatable weekly rhythm for visibility and follow-through",
+    ].map((x) => (
+      <li key={x} className="flex gap-3">
+        <span className="mt-2 h-4 w-px bg-[#FFC83D]" />
+        <span className="leading-relaxed">{x}</span>
+      </li>
+    ))}
+  </ul>
+
+  <p className="mt-4 text-white/70 leading-relaxed">
+    The goal was reliability: fewer surprises, clearer decisions, and smoother execution.
+  </p>
+      </div>
+
+      {/* What Changed */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-medium tracking-wide text-white/85">
+          What changed
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Within weeks, stakeholders had a shared view of status, follow-ups
+          dropped, risks surfaced earlier, and execution became predictable
+          instead of reactive. Decisions were made with confidence, not
+          guesswork.
+        </p>
+      </div>
+
+      {/* Why it worked */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-medium tracking-wide text-white/85">
+          Why it worked
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          Systems outperform effort. By separating signal from noise, structure
+          from tools, and execution from personalities, the system became
+          resilient, scalable, and easier to improve over time.
+        </p>
+      </div>
+
+      {/* Close */}
+      <div className="space-y-3">
+        <h3 className="text-sm font-medium tracking-wide text-white/85">
+          What this enables
+        </h3>
+        <p className="text-white/70 leading-relaxed">
+          The same approach supports automation, AI-assisted workflows, and
+          scalable delivery systems — while keeping execution calm and high-trust.
+        </p>
+
+        <p className="mt-6 text-white/80 leading-relaxed">
+          <span className="text-white/90 font-medium">
+            I don’t start with tools.
+          </span>{" "}
+          I start with clarity — and build systems that last.
+        </p>
+      </div>
+    </div>
+  </div>
+</motion.section>
+
+<Divider />
+
 
       {/* ================= WHAT I DO ================= */}
       <motion.section {...sectionReveal()} className="py-20 sm:py-28" id="work">
@@ -279,7 +408,7 @@ export default function Page() {
               href="mailto:hello@yourdomain.com"
               className="block text-[#FFC83D] hover:opacity-90"
             >
-             hello@bessani.dev→
+             hello@yourdomain.com→
             </a>
             <a
               href="https://www.linkedin.com/"
